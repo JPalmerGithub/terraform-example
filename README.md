@@ -1,6 +1,6 @@
-# straycat-terraform
+# terraform-example
 
-The root of the Straycat infrastructure Terraform.
+The root of the Example infrastructure Terraform.
 
 This repository is the root repository for Terraform.  It's role is to establish the remote state bucket and setup the logging for it so we can track state file changes.
 
