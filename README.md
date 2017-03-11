@@ -22,7 +22,7 @@ Module repositories are for Terraform modules that will be reused.  They cannot 
 Terraform service define what infrastructure looks like.
 
 Service repositories are for managing pieces of our infrastructure.  They are typically foundational blocks that don't correspond to a particular application.  For example:
-* AWS VPC
+* [AWS VPC](https://github.com/threatstack/terraform-example-aws-vpc)
 * AWS IAM
   * A service may add additional roles
 * AWS Route53
