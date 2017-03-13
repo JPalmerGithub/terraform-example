@@ -1,8 +1,8 @@
 # terraform-example
 
-___NOTE: This repository is meant to be copied and provide people a starter for a greenfield environment.  The Terraform service (terraform-example-*) and Terraform module (tf_example_*) repositories are opinionated.  (ex., see [tf_example_aws_iam_s3](https://github.com/threatstack/tf_example_aws_s3) and how it automatically handles bucket naming to avoid name collisions.)  They are opinionated because all infrastructure is opinionated in certain ways.  If these repositories prove useful to you, fork or copy them and start your own environment.
+___NOTE: This repository is meant to be copied and provide people a starter for a greenfield environment.  The Terraform service (terraform-example-*) and Terraform module (tf_example_*) repositories are opinionated.  (ex., see [tf_example_aws_iam_s3](https://github.com/threatstack/tf_example_aws_s3) and how it automatically handles bucket naming to avoid name collisions.)  They are opinionated because all infrastructure is opinionated in certain ways.  If these repositories prove useful to you, fork or copy them and start your own environment.___
 
-Not all modules are complete.  Features are added as needed and new problems are solved as they're encountered.___
+___Not all modules are complete.  Features are added as needed and new problems are solved as they're encountered.___
 
 The root of the Example.com infrastructure Terraform.
 
