@@ -7,7 +7,7 @@ module "aws_s3_bucket_terraform_state_logs" {
 }
 
 module "aws_s3_bucket_terraform_state" {
-  source         = "github.com/tmclaugh/tf_example_aws_s3"
+  source         = "github.com/threatstack/tf_example_aws_s3"
   s3_bucket_name = "${var.terraform_state_bucket}"
   s3_logs_bucket = "${module.aws_s3_bucket_terraform_state_logs.bucket_id}"
   versioning     = "true"
