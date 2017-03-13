@@ -23,5 +23,4 @@ aws_profile       = "example-prod"      # AWS credentials profile name
 aws_account       = "example-prod"      # AWS account name
 domain            = "example.com"       # domain name
 aws_s3_prefix     = "example-com"       # we prefix S3 buckets with this
-environment       = "master"            # Name of our environment
 
