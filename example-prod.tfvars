@@ -15,7 +15,7 @@ terragrunt = {
 }
 
 # WARNING: Must be aligned with terragrunt setup.
-# NOTE: tf_straycat_svc takes care of the
+# NOTE: tf_example_svc takes care of the
 # {var.aws_s3_prefix}-{var.aws_account} in the bucket name.
 terraform_state_bucket = "terraform"
 
