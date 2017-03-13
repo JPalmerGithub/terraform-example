@@ -1,6 +1,10 @@
 # terraform-example
 
-The root of the Example infrastructure Terraform.
+___NOTE: This repository is meant to be copied and provide people a starter for a greenfield environment.  The Terraform service (terraform-example-*) and Terraform module (tf_example_*) repositories are opinionated.  (ex., see [tf_example_aws_iam_s3](https://github.com/threatstack/tf_example_aws_s3) and how it automatically handles bucket naming to avoid name collisions.)  They are opinionated because all infrastructure is opinionated in certain ways.  If these repositories prove useful to you, fork or copy them and start your own environment.
+
+Not all modules are complete.  Features are added as needed and new problems are solved as they're encountered.___
+
+The root of the Example.com infrastructure Terraform.
 
 This repository is the root repository for Terraform.  It's role is to establish the remote state bucket and setup the logging for it so we can track state file changes.
 
@@ -22,11 +26,25 @@ Module repositories are for Terraform modules that will be reused.  They cannot 
 Terraform service define what infrastructure looks like.
 
 Service repositories are for managing pieces of our infrastructure.  They are typically foundational blocks that don't correspond to a particular application.  For example:
-* [AWS VPC](https://github.com/threatstack/terraform-example-aws-vpc)
-* AWS IAM
-  * A service may add additional roles
+* [AWS VPC](https://github.com/threatstack/terraform-exmple-aws-vpc)
+* [AWS IAM](https://github.com/threatstack/terraform-example-aws-iam)
+  * Additional users, groups, roles, and policies directly associated with services can be added using these modules:
+    * [tf_example_aws_iam](https://github.com/threatstack/tf_example_aws_iam_user)
+    * tf_example_aws_iam_role
+    * tf_example_aws_iam_role
+    * tf_example_aws_iam_policy
+* [AWS CloudTrail](https://github.com/threatstack/terraform-example-aws-cloudtrail)
+  * Additional cloustrails can be created with:
+    * [tf_example_aws_iam_cloudtrail](https://github.com/threatstack/tf_example_aws_cloudtrail)
 * AWS Route53
-  * records may be added by an application
+  * This should handle zone and basic record setup.
+  * Service related recorss records should be handled by:
+    * tf_example_aws_route53_record
+* Bastion host
+  * This is the only SSH ingress point into the enviornment
+
+For services with code assets, add the terraform code for the service under _deploy/_.  For services without code assets, create a repo called terraform-example-[service_name].  Additional services should use the Terraform module below.
+* [tf_example_svc](https://github.com/threatstack/tf_example_svc)
 
 ___Note: We are currently mixing modules into our service repos.  We should probably stop that and move our modules into their own repos for consistency.___
 
