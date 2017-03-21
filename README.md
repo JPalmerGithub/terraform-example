@@ -4,6 +4,8 @@ ___NOTE: This repository is meant to be copied and provide people a starter for 
 
 ___Not all modules are complete.  Features are added as needed and new problems are solved as they're encountered.___
 
+___More about this and related repos can be found here: https://blog.threatstack.com/incorporating-aws-security-best-practices-into-terraform-design___
+
 The root of the Example.com infrastructure Terraform.
 
 This repository is the root repository for Terraform.  It's role is to establish the remote state bucket and setup the logging for it so we can track state file changes.
